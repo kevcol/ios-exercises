@@ -12,10 +12,7 @@
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
     /*  Create a sentence indicating a favorite cheese. */
-    
-    NSString *fullSentence;
-    NSString *favoriteCheeseStringWithCheese = @"My favorite cheese is %@.";
-    fullSentence = [NSString stringWithFormat:favoriteCheeseStringWithCheese, cheeseName];
+    NSString *fullSentence = [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
     return fullSentence;
 }
 
@@ -36,7 +33,6 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
-    
     if (cheeseCount == 1) {
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
         
