@@ -22,7 +22,7 @@
 
     NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
    
-    if (cheeseRange.location == 9223372036854775807) {
+    if (cheeseRange.location == NSNotFound) {
         return cheeseName;
         
     } else {
