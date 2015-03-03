@@ -25,6 +25,7 @@
  
  @return Returns a full sentence indicating a favorite cheese.
  */
+
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName;
 
 /**
@@ -43,6 +44,7 @@
  
  @return Returns the name of the favorite cheese without the word "cheese".
  */
+
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName;
 
 /**
