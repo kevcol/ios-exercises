@@ -10,6 +10,14 @@
 
 @interface StuffRememberer : NSObject
 
+// SET UP SOME PROPERTIES
+@property (nonatomic, strong) NSMutableArray *rememberMe;
+@property (nonatomic, copy) NSMutableArray *itemCopied;
+@property (assign) CGFloat floatMe;
+
+/* BRANDON: Originally, I named "*itemCopied" above "*copyMe" and got a build error - because the array name "followed Cocoa naming convention for returning 'owned' objects".  Not sure I get that, but worked when I changed name.  
+ */
+
 /*
  
  In this class, there are three pairs of methods.
