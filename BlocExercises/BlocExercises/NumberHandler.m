@@ -11,18 +11,55 @@
 @implementation NumberHandler
 
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
-    /* WORK HERE */
-    return @0;
+    
+    // Unbox and double
+    NSInteger temp = [number intValue] * 2;
+    
+    // Box
+    NSNumber *doubleDigit = [NSNumber numberWithDouble:temp];
+    
+    return doubleDigit;
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
-    /* WORK HERE */
-    return @[];
+    
+    // CREATE LOW/HIGH VARIABLES
+    NSInteger lowNumber;
+    NSInteger highNumber;
+    
+    // SET LOW & HIGH NUMBERS
+    if (number <= otherNumber) {
+        lowNumber = number;
+        highNumber = otherNumber;
+    } else {
+        lowNumber = otherNumber;
+        highNumber = number;
+    }
+
+    // LOOP TO BUILD ARRAY
+    NSMutableArray *span = [NSMutableArray array];
+    
+    for (NSInteger i = lowNumber; i <= highNumber; i++) {
+        [span addObject:[NSNumber numberWithDouble:i]];
+         }
+    
+    return span;
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    /* WORK HERE */
-    return 0;
+    
+    // MAKE MUTABLE ARRAY
+    NSMutableArray *mutableNumbers = [arrayOfNumbers mutableCopy];
+    
+    // SORT IT LOW TO HIGH
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+    [mutableNumbers sortUsingDescriptors:@[sortDescriptor]];
+    
+    //GIVE BACK FIRST ITEM AS ANSWER
+    NSInteger finalAnswer = [mutableNumbers[0] intValue];
+    
+    
+    return  finalAnswer;
 }
 
 @end
