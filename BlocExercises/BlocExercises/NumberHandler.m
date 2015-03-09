@@ -50,7 +50,7 @@
     
     if ([arrayOfNumbers count] == 0) {
         
-        return 0;
+        return NSNotFound;
         
     } else {
         
