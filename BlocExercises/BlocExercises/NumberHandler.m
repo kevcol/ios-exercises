@@ -16,7 +16,7 @@
     NSInteger temp = [number intValue] * 2;
     
     // Box
-    NSNumber *doubleDigit = [NSNumber numberWithDouble:temp];
+    NSNumber *doubleDigit = [NSNumber numberWithInteger:temp];
     
     return doubleDigit;
 }
@@ -40,7 +40,7 @@
     NSMutableArray *span = [NSMutableArray array];
     
     for (NSInteger i = lowNumber; i <= highNumber; i++) {
-        [span addObject:[NSNumber numberWithDouble:i]];
+        [span addObject:[NSNumber numberWithInteger:i]];
          }
     
     return span;
@@ -48,18 +48,31 @@
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     
+    if ([arrayOfNumbers count] == 0) {
+        
+        return 0;
+        
+    } else {
+        
+    
+
     // MAKE MUTABLE ARRAY
     NSMutableArray *mutableNumbers = [arrayOfNumbers mutableCopy];
+
     
     // SORT IT LOW TO HIGH
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
     [mutableNumbers sortUsingDescriptors:@[sortDescriptor]];
+    
     
     //GIVE BACK FIRST ITEM AS ANSWER
     NSInteger finalAnswer = [mutableNumbers[0] intValue];
     
     
     return  finalAnswer;
+        }
+        
+         
 }
 
 @end
