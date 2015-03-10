@@ -15,8 +15,6 @@
 @property (nonatomic, copy) NSMutableArray *itemCopied;
 @property (assign) CGFloat floatMe;
 
-/* BRANDON: Originally, I named "*itemCopied" above "*copyMe" and got a build error - because the array name "followed Cocoa naming convention for returning 'owned' objects".  Not sure I get that, but worked when I changed name.  
- */
 
 /*
  
@@ -63,6 +61,7 @@
  @return The copied mutable array, or @c nil if none was provided.
  */
 - (NSMutableArray *) arrayYouShouldCopy;
+
 
 // --------------------------------------------------------------------
 

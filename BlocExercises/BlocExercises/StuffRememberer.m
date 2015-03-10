@@ -33,7 +33,9 @@
 
 - (NSMutableArray *) arrayYouShouldCopy {
     /* WORK HERE */
-    return self.itemCopied;
+    
+    NSMutableArray *itemCopied = self.itemCopied;
+    return itemCopied;
 }
 
 - (CGFloat) floatYouShouldRemember {
