@@ -107,12 +107,8 @@ let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
 
-func groceryString(strings: Array<String>) {
+func groceryString(strings: Array<String>) -> String {
     let strung = "" + ";".join(strings)
-    
-    println(strung)
-    
-    // BRANDON: I'M A LITTLE STUMPED BY THIS RETURN ERROR: 'String' is not convertible to '()'
     return strung
     
 }
