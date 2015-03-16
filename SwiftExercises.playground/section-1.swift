@@ -9,16 +9,15 @@ Strings
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
     
-    
-    return cheese
+    let fullSentence = "My favorite cheese is \(cheese)."
+    return fullSentence
 }
 
-let preText = "My favorite cheese is "
-let dot = "."
 
+favoriteCheeseStringWithCheese("cheddar")
 
-let fullSentence = "\(preText)" + favoriteCheeseStringWithCheese("cheddar") + "\(dot)"
 // Make fullSentence say "My favorite cheese is cheddar."
+
 
 /*
 
@@ -105,15 +104,23 @@ Functions
 
 let strings = ["milk", "eggs", "bread", "challah"]
 
+
 // WORK HERE - make your function and pass `strings` in
 
-func printGroceryString(items: Array<String>) {
-    let itemsStringed = ";".join(items)
+func groceryString(strings: Array<String>) {
+    let strung = "" + ";".join(strings)
+    
+    println(strung)
+    
+    // BRANDON: I'M A LITTLE STUMPED BY THIS RETURN ERROR: 'String' is not convertible to '()'
+    return strung
+    
 }
 
-printGroceryString(strings)
+groceryString(strings)
 
-let expectedOutput = "milk;eggs;bread;challah"
+
+// let expectedOutput = "milk;eggs;bread;challah"
 
 /*
 
@@ -123,10 +130,12 @@ Closures
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
 
-// Use a closure to sort this array alphabetically
+// Use a TRAILING closure to sort this array alphabetically
 
-let cerealSorted = sorted(cerealArray, { (s1: String, s2: String) -> Bool in
-    return s1 < s2 } )
+let cerealSorted = sorted(cerealArray) { (s1: String, s2: String) -> Bool in
+    return s1 < s2 }
+
+
 
 
 
